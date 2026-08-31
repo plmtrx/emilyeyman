@@ -43,6 +43,15 @@ h2 {
   text-align: justify;
 }
 
+#video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 10%;
+}
+
+
 /* Navigation Bar */
 
 .navbarDiv {
@@ -151,16 +160,56 @@ img {
     }
 }
 
+/* Videos */
+#videos {
+  padding-top: 10%;
+}
+
+/* Work */
+.masonry-grid {
+  column-count: 1;
+  column-gap: 1.5rem; /* Matches Bootstrap gutter spacing */
+}
+
+@media (min-width: 576px) {
+  .masonry-grid { column-count: 2; }
+}
+
+@media (min-width: 992px) {
+  .masonry-grid { column-count: 3; }
+}
+
+/* Prevents images from breaking across column boundaries */
+.masonry-item {
+  break-inside: avoid;
+}
+
+.photography-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;     
+  text-align: center; 
+  padding: 2rem 1.25rem;      
+}
+
+.videos-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;     
+  text-align: center; 
+  padding: 2rem 1.25rem; 
+}
+
 /* Contact */
 #contact {
   display: flex;
   flex-direction: column;
-  /* justify-content: center;  */
   align-items: center;     
   text-align: center;      
   min-height: 100vh;     
 }
 .contact-info {
+  font-size: 0.8rem;
   max-width: 500px; 
   margin: 0 auto 1.5rem auto; 
   padding: 0 1.25rem; 
