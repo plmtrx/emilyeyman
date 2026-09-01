@@ -217,6 +217,24 @@ img {
   line-height: 1.6; 
 }
 
+#horizontal-pic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    
+    /* Adjust these values to control top and bottom spacing */
+    padding-top: 50px;    /* Change to 0px, 5px, 20px, etc. */
+    padding-bottom: 50px; /* Adjust as needed */
+}
+
+.horizontal-pic {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
 /* Footer */
 
 #footer {
