@@ -3,210 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>emily eyman</title>
+    <title>Work | Emily Eyman</title>
     <link rel="icon" type="image/x-icon" href="images/logos/logo2.svg">
 
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="./styles/bootstrap/css/bootstrap.min.css">
+    <!-- Preload Critical Above-the-Fold Portfolio Images -->
+    <link rel="preload" as="image" href="images/photo1.webp" type="image/webp">
+    <link rel="preload" as="image" href="images/photo2.webp" type="image/webp">
+    <link rel="preload" as="image" href="images/photo3.webp" type="image/webp">
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200&family=Cousine:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <!-- CSS -->
-    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200&family=Cousine:ital,wght@0,400;0,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
+    <!-- CSS -->
+    <link rel="stylesheet" href="./styles/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
     <div id="page-container">
-        <div id="page-content">
-            <!-- Navbar -->
-            <section id="home">
-                <div class="navbarDiv container-fluid">
-                    <nav class="navbar navbar-expand-lg w-100 justify-content-between">
-                        <a class="navbar-brand" href="index.html"><img class="logo" src="images/logos/logo.svg" alt="logo"></a>
-                            <button class="navbar-toggler navbar-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
-                        <div class="collapse navbar-collapse" id="navbarNav">
-                            <ul class="navbar-nav ms-auto">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="about.html">about</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="work.html">work</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="contact.html">contact</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="https://www.instagram.com/ejtookthis?igsi=MWs1d3k1dmIwNWoycg==">
-                                        <img src="images/logos/ig.svg" alt="Instagram" class="ig-icon">
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
+        <header>
+            <nav class="navbar navbar-expand-lg navbarDiv container-fluid w-100 justify-content-between">
+                <a class="navbar-brand" href="index.html">
+                    <img class="logo" src="images/logos/logo.svg" alt="Emily Eyman Logo">
+                </a>
+                <button class="navbar-toggler navbar-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="about.html">about</a></li>
+                        <li class="nav-item"><a class="nav-link" href="work.html">work</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">contact</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.instagram.com/ejtookthis" target="_blank" rel="noopener">
+                                <img src="images/logos/ig.svg" alt="Instagram Profile" class="ig-icon">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <main id="main-content">
+            <section id="photography">
+                <div class="photography-title">
+                    <h2>Photography</h2>
+                </div>
+
+                <div class="container-fluid px-4 px-md-5">
+                    <div class="masonry-grid">
+                        <!-- Above-the-fold images: Fetch immediately with explicit sizing -->
+                        <div class="masonry-item"><img src="images/photo1.webp" width="800" height="1200" class="rounded" alt="Portfolio shoot 1"></div>
+                        <div class="masonry-item"><img src="images/photo2.webp" width="800" height="1200" class="rounded" alt="Portfolio shoot 2"></div>
+                        <div class="masonry-item"><img src="images/photo3.webp" width="800" height="1200" class="rounded" alt="Portfolio shoot 3"></div>
+                        
+                        <!-- Deferred images: Lazy load as user scrolls -->
+                        <div class="masonry-item"><img src="images/photo4.webp" width="800" height="1200" class="rounded" alt="Portfolio shoot 4" loading="lazy"></div>
+                        <div class="masonry-item"><img src="images/photo5.webp" width="800" height="1200" class="rounded" alt="Portfolio shoot 5" loading="lazy"></div>
+                        <div class="masonry-item"><img src="images/photo6.webp" width="800" height="1200" class="rounded" alt="Portfolio shoot 6" loading="lazy"></div>
+                        <div class="masonry-item"><img src="images/photo7.webp" width="800" height="1200" class="rounded" alt="Portfolio shoot 7" loading="lazy"></div>
+                        <div class="masonry-item"><img src="images/photo8.webp" width="800" height="1200" class="rounded" alt="Portfolio shoot 8" loading="lazy"></div>
+                        <div class="masonry-item"><img src="images/photo9.webp" width="800" height="1200" class="rounded" alt="Portfolio shoot 9" loading="lazy"></div>
+                        <div class="masonry-item"><img src="images/photo10.webp" width="800" height="1200" class="rounded" alt="Portfolio shoot 10" loading="lazy"></div>
+                        <div class="masonry-item"><img src="images/photo11.webp" width="800" height="1200" class="rounded" alt="Portfolio shoot 11" loading="lazy"></div>
+                        <div class="masonry-item"><img src="images/photo12.webp" width="800" height="1200" class="rounded" alt="Portfolio shoot 12" loading="lazy"></div>
+                        <div class="masonry-item"><img src="images/photo13.webp" width="800" height="1200" class="rounded" alt="Portfolio shoot 13" loading="lazy"></div>
+                        <div class="masonry-item"><img src="images/photo14.webp" width="800" height="1200" class="rounded" alt="Portfolio shoot 14" loading="lazy"></div>
+                        <div class="masonry-item"><img src="images/photo15.webp" width="800" height="1200" class="rounded" alt="Portfolio shoot 15" loading="lazy"></div>
+                        <div class="masonry-item"><img src="images/photo16.webp" width="800" height="1200" class="rounded" alt="Portfolio shoot 16" loading="lazy"></div>
+                        <div class="masonry-item"><img src="images/photo17.webp" width="800" height="1200" class="rounded" alt="Portfolio shoot 17" loading="lazy"></div>
+                        <div class="masonry-item"><img src="images/photo18.webp" width="800" height="1200" class="rounded" alt="Portfolio shoot 18" loading="lazy"></div>
+                        <div class="masonry-item"><img src="images/photo19.webp" width="800" height="1200" class="rounded" alt="Portfolio shoot 19" loading="lazy"></div>
+                        <div class="masonry-item"><img src="images/photo20.webp" width="800" height="1200" class="rounded" alt="Portfolio shoot 20" loading="lazy"></div>
+                        <div class="masonry-item"><img src="images/photo21.webp" width="800" height="1200" class="rounded" alt="Portfolio shoot 21" loading="lazy"></div>
+                        <div class="masonry-item"><img src="images/photo22.webp" width="800" height="1200" class="rounded" alt="Portfolio shoot 22" loading="lazy"></div>
+                        <div class="masonry-item"><img src="images/photo23.webp" width="800" height="1200" class="rounded" alt="Portfolio shoot 23" loading="lazy"></div>
+                        <div class="masonry-item"><img src="images/photo24.webp" width="800" height="1200" class="rounded" alt="Portfolio shoot 24" loading="lazy"></div>
+                        <div class="masonry-item"><img src="images/photo25.webp" width="800" height="1200" class="rounded" alt="Portfolio shoot 25" loading="lazy"></div>
+                        <div class="masonry-item"><img src="images/photo26.webp" width="800" height="1200" class="rounded" alt="Portfolio shoot 26" loading="lazy"></div>
+                        <div class="masonry-item"><img src="images/photo27.webp" width="800" height="1200" class="rounded" alt="Portfolio shoot 27" loading="lazy"></div>
+                        <div class="masonry-item"><img src="images/photo28.webp" width="800" height="1200" class="rounded" alt="Portfolio shoot 28" loading="lazy"></div>
+                        <div class="masonry-item"><img src="images/photo29.webp" width="800" height="1200" class="rounded" alt="Portfolio shoot 29" loading="lazy"></div>
+                        <div class="masonry-item"><img src="images/photo30.webp" width="800" height="1200" class="rounded" alt="Portfolio shoot 30" loading="lazy"></div>
+                        <div class="masonry-item"><img src="images/photo31.webp" width="800" height="1200" class="rounded" alt="Portfolio shoot 31" loading="lazy"></div>
+                        <div class="masonry-item"><img src="images/photo32.webp" width="800" height="1200" class="rounded" alt="Portfolio shoot 32" loading="lazy"></div>
+                        <div class="masonry-item"><img src="images/photo33.webp" width="800" height="1200" class="rounded" alt="Portfolio shoot 33" loading="lazy"></div>
+                        <div class="masonry-item"><img src="images/photo34.webp" width="800" height="1200" class="rounded" alt="Portfolio shoot 34" loading="lazy"></div>
+                        <div class="masonry-item"><img src="images/photo35.webp" width="800" height="1200" class="rounded" alt="Portfolio shoot 35" loading="lazy"></div>
+                        <div class="masonry-item"><img src="images/photo36.webp" width="800" height="1200" class="rounded" alt="Portfolio shoot 36" loading="lazy"></div>
+                        <div class="masonry-item"><img src="images/photo37.webp" width="800" height="1200" class="rounded" alt="Portfolio shoot 37" loading="lazy"></div>
+                        <div class="masonry-item"><img src="images/photo38.webp" width="800" height="1200" class="rounded" alt="Portfolio shoot 38" loading="lazy"></div>
+                        <div class="masonry-item"><img src="images/photo39.webp" width="800" height="1200" class="rounded" alt="Portfolio shoot 39" loading="lazy"></div>
+                    </div>
+                </div> 
+            </section>
+
+            <section id="videos">
+                <div class="videos-title">
+                    <h2>Videos</h2>
+                </div>
+                <div id="video-container">
+                    <iframe src="https://www.youtube.com/embed/Sb6NK4u0mGo" 
+                            title="Emily Eyman Video Portfolio 1" 
+                            loading="lazy" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen></iframe>
+                </div>
+                <div id="video-container">
+                    <iframe src="https://www.youtube.com/embed/S7mRn7wdzDk" 
+                            title="Emily Eyman Video Portfolio 2" 
+                            loading="lazy" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen></iframe>
                 </div>
             </section>
-        </div>
+        </main>
 
-        <section id="photography">
-            <div id="photos-title">
-                <h2 class="photography-title">Photography</h2>
+        <footer>
+            <div class="links">
+                <a class="footer-link" href="mailto:emilyeymancreative@yahoo.com">Contact me</a>
             </div>
-
-            <div class="container-fluid px-4 px-md-5">
-                <div class="masonry-grid">
-                    <div class="masonry-item mb-4">
-                        <img src="images/photo1.webp" class="img-fluid rounded" alt="photo" >
-                    </div>
-                    <div class="masonry-item mb-4">
-                        <img src="images/photo2.webp" class="img-fluid rounded" alt="photo" >
-                    </div>
-                    <div class="masonry-item mb-4">
-                        <img src="images/photo3.webp" class="img-fluid rounded" alt="photo" >
-                    </div>
-                    <div class="masonry-item mb-4">
-                        <img src="images/photo4.webp" class="img-fluid rounded" alt="photo" >
-                    </div>
-                    <div class="masonry-item mb-4">
-                        <img src="images/photo5.webp" class="img-fluid rounded" alt="photo" >
-                    </div>
-                    <div class="masonry-item mb-4">
-                        <img src="images/photo6.webp" class="img-fluid rounded" alt="photo" >
-                    </div>
-                    <div class="masonry-item mb-4">
-                        <img src="images/photo7.webp" class="img-fluid rounded" alt="photo" >
-                    </div>
-                    <div class="masonry-item mb-4">
-                        <img src="images/photo8.webp" class="img-fluid rounded" alt="photo" >
-                    </div>
-                    <div class="masonry-item mb-4">
-                        <img src="images/photo9.webp" class="img-fluid rounded" alt="photo" >
-                    </div>
-                    <div class="masonry-item mb-4">
-                        <img src="images/photo10.webp" class="img-fluid rounded" alt="photo" >
-                    </div>
-                    <div class="masonry-item mb-4">
-                        <img src="images/photo11.webp" class="img-fluid rounded" alt="photo" >
-                    </div>
-                    <div class="masonry-item mb-4">
-                        <img src="images/photo12.webp" class="img-fluid rounded" alt="photo" >
-                    </div>
-                    <div class="masonry-item mb-4">
-                        <img src="images/photo13.webp" class="img-fluid rounded" alt="photo" >
-                    </div>
-                    <div class="masonry-item mb-4">
-                        <img src="images/photo14.webp" class="img-fluid rounded" alt="photo" >
-                    </div>
-                    <div class="masonry-item mb-4">
-                        <img src="images/photo15.webp" class="img-fluid rounded" alt="photo" >
-                    </div>
-                    <div class="masonry-item mb-4">
-                        <img src="images/photo16.webp" class="img-fluid rounded" alt="photo" >
-                    </div>
-                    <div class="masonry-item mb-4">
-                        <img src="images/photo17.webp" class="img-fluid rounded" alt="photo" >
-                    </div>
-                    <div class="masonry-item mb-4">
-                        <img src="images/photo18.webp" class="img-fluid rounded" alt="photo" >
-                    </div>
-                    <div class="masonry-item mb-4">
-                        <img src="images/photo19.webp" class="img-fluid rounded" alt="photo" >
-                    </div>
-                    <div class="masonry-item mb-4">
-                        <img src="images/photo20.webp" class="img-fluid rounded" alt="photo" >
-                    </div>
-                    <div class="masonry-item mb-4">
-                        <img src="images/photo21.webp" class="img-fluid rounded" alt="photo" >
-                    </div>
-                    <div class="masonry-item mb-4">
-                        <img src="images/photo22.webp" class="img-fluid rounded" alt="photo" >
-                    </div>
-                    <div class="masonry-item mb-4">
-                        <img src="images/photo23.webp" class="img-fluid rounded" alt="photo" >
-                    </div>
-                    <div class="masonry-item mb-4">
-                        <img src="images/photo24.webp" class="img-fluid rounded" alt="photo" >
-                    </div>
-                    <div class="masonry-item mb-4">
-                        <img src="images/photo25.webp" class="img-fluid rounded" alt="photo" >
-                    </div>
-                    <div class="masonry-item mb-4">
-                        <img src="images/photo26.webp" class="img-fluid rounded" alt="photo" >
-                    </div>
-                    <div class="masonry-item mb-4">
-                        <img src="images/photo27.webp" class="img-fluid rounded" alt="photo" >
-                    </div>
-                    <div class="masonry-item mb-4">
-                        <img src="images/photo28.webp" class="img-fluid rounded" alt="photo" >
-                    </div>
-                    <div class="masonry-item mb-4">
-                        <img src="images/photo29.webp" class="img-fluid rounded" alt="photo" >
-                    </div>
-                    <div class="masonry-item mb-4">
-                        <img src="images/photo30.webp" class="img-fluid rounded" alt="photo" >
-                    </div>
-                    <div class="masonry-item mb-4">
-                        <img src="images/photo31.webp" class="img-fluid rounded" alt="photo" >
-                    </div>
-                    <div class="masonry-item mb-4">
-                        <img src="images/photo32.webp" class="img-fluid rounded" alt="photo" >
-                    </div>
-                    <div class="masonry-item mb-4">
-                        <img src="images/photo33.webp" class="img-fluid rounded" alt="photo" >
-                    </div>
-                    <div class="masonry-item mb-4">
-                        <img src="images/photo34.webp" class="img-fluid rounded" alt="photo" >
-                    </div>
-                    <div class="masonry-item mb-4">
-                        <img src="images/photo35.webp" class="img-fluid rounded" alt="photo" >
-                    </div>
-                    <div class="masonry-item mb-4">
-                        <img src="images/photo36.webp" class="img-fluid rounded" alt="photo" >
-                    </div>
-                    <div class="masonry-item mb-4">
-                        <img src="images/photo37.webp" class="img-fluid rounded" alt="photo" >
-                    </div>
-                    <div class="masonry-item mb-4">
-                        <img src="images/photo38.webp" class="img-fluid rounded" alt="photo" >
-                    </div>
-                    <div class="masonry-item mb-4">
-                        <img src="images/photo39.webp" class="img-fluid rounded" alt="photo" >
-                    </div>
-                </div>
-            </div> 
-        </section>
-
-        <section id="videos">
-            <div id="videos-title">
-                <h2 class="photography-title">Videos</h2>
-            </div>
-            <div id="video-container">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/Sb6NK4u0mGo?si=kW5hyuOoeeUmE3_U" 
-                title="YouTube video player" style="border: 0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-            <div id="video-container">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/S7mRn7wdzDk?si=ht56Y7FdRPQt73aY" 
-                title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-        </section>
-
-        <!-- Footer -->
-        <div id="footer">
-            <footer>
-                <div class="links">
-                    <a class="footer-link" href="mailto:emilyeymancreative@yahoo.com">Contact me</a>
-                </div>
-                <p class="copyright">© 2026 by Emily Eyman. All rights reserved.</p>
-            </footer>
-        </div>
-
+            <p class="copyright">© 2026 by Emily Eyman. All rights reserved.</p>
+        </footer>
     </div>
 
     <script src="./styles/bootstrap/js/bootstrap.bundle.min.js"></script>
-
 </body>
 </html>

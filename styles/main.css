@@ -1,59 +1,64 @@
-body, html {
+/* --- Global Resets & Base Typography --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
   overflow-x: hidden;
 }
 
 body {
   background-color: #E8E7DA;
-  font-size: 2.5em;
-}
-
-p {
-  font-family: 'Montserrat';
+  color: #000000;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 200;
   font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Headings & Text Fallbacks */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
 }
 
 h2 {
-  font-family: 'Montserrat';
-  font-weight: 400;
   font-size: 1.3rem;
 }
 
+p {
+  font-size: 1rem;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+  padding: 0.5rem;
+  transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+  color: #ADA87A;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* --- Flexible Layout Setup (Sticky Footer) --- */
 #page-container {
-  position: relative;
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
 }
 
-#page-content {
-  padding-bottom: 3%;
+#main-content {
+  flex: 1 0 auto;
 }
 
-.section-title {
-  font-family: 'Cousine';
-  font-weight: 700;
-  font-size: 3rem;
-  padding: 2% 0;
-}
-
-.section-text {
-  font-family: 'Montserrat';
-  font-weight: 200;
-  font-size: 1.3rem;
-  padding: 4% 0;
-  text-align: justify;
-}
-
-#video-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding-bottom: 10%;
-}
-
-
-/* Navigation Bar */
-
+/* --- Header & Navigation Bar --- */
 .navbarDiv {
   padding: 0;
   width: 100%;
@@ -83,15 +88,15 @@ h2 {
 }
 
 .nav-item {
-  padding: 0 18px;
+  padding: 0 1.125rem;
 }
 
 .nav-link {
   font-size: 1rem;
-  font-family: 'Montserrat';
   font-weight: 300;
-  color: black !important;
+  color: #000000 !important;
   padding: 0 2rem !important;
+  transition: color 0.2s ease-in-out;
 }
 
 .nav-link:hover {
@@ -105,45 +110,45 @@ h2 {
   vertical-align: middle;
 }
 
-/* Home */
-img {
-  display: block;
+/* --- Bio & Main Content Sections --- */
+.bio-section {
+  padding-top: 2rem;
 }
 
 .text-div {
   width: 70%;
   margin-left: 3.8%;
-  padding-bottom: 1%;
-  padding-right: 0;
+  padding-bottom: 1rem;
 }
 
 .about {
-  color: black;
+  color: #000000;
   font-size: 1.5rem;
-  font-family: 'Assistant';
+  font-family: 'Assistant', sans-serif;
   font-weight: 200;
-}
-
-/* About */
-.about {
   text-align: justify;
   width: 100%;
-  background-color: #E8E7DA;
+  background-color: transparent;
   padding: 0;
 }
 
-.about-pic {
-  width: 100%;
+.section-title {
+  font-family: 'Cousine', monospace;
+  font-weight: 700;
+  font-size: 3rem;
+  padding: 2% 0;
 }
 
-.about-text {
-  padding: 9% 13%;
+.section-text {
+  font-weight: 200;
+  font-size: 1.3rem;
+  padding: 4% 0;
+  text-align: justify;
 }
 
-/* Photos */
-
+/* --- Homepage Photography --- */
 #photos {
-  padding: 10% 0 10% 0;
+  padding: 5rem 0;
 }
 
 .photo-big {
@@ -154,21 +159,10 @@ img {
   width: 80%;
 }
 
-@media (max-width: 991.98px) {
-    .pic-div {
-        padding-bottom: 5%; 
-    }
-}
-
-/* Videos */
-#videos {
-  padding-top: 10%;
-}
-
-/* Work */
+/* --- Portfolio Masonry Grid (Work Page) --- */
 .masonry-grid {
   column-count: 1;
-  column-gap: 1.5rem; /* Matches Bootstrap gutter spacing */
+  column-gap: 1.5rem;
 }
 
 @media (min-width: 576px) {
@@ -179,12 +173,19 @@ img {
   .masonry-grid { column-count: 3; }
 }
 
-/* Prevents images from breaking across column boundaries */
 .masonry-item {
   break-inside: avoid;
+  margin-bottom: 1.5rem;
 }
 
-.photography-title {
+.masonry-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.photography-title,
+.videos-title {
   display: flex;
   flex-direction: column;
   align-items: center;     
@@ -192,24 +193,38 @@ img {
   padding: 2rem 1.25rem;      
 }
 
-.videos-title {
-  display: flex;
-  flex-direction: column;
-  align-items: center;     
-  text-align: center; 
-  padding: 2rem 1.25rem; 
+/* --- Video Embed Container --- */
+#videos {
+  padding-top: 5rem;
 }
 
-/* Contact */
+#video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto 3rem auto;
+  padding: 0 1rem;
+}
+
+#video-container iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  border: 0;
+}
+
+/* --- Contact Page --- */
 #contact {
   display: flex;
   flex-direction: column;
   align-items: center;     
   text-align: center;      
-  min-height: 100vh;     
 }
+
 .contact-info {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   max-width: 500px; 
   margin: 0 auto 1.5rem auto; 
   padding: 0 1.25rem; 
@@ -217,59 +232,72 @@ img {
   line-height: 1.6; 
 }
 
+/* Full-bleed horizontal image (No side padding) */
 #horizontal-pic {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    
-    /* Adjust these values to control top and bottom spacing */
-    padding-top: 50px;    /* Change to 0px, 5px, 20px, etc. */
-    padding-bottom: 50px; /* Adjust as needed */
+  width: 100%;
+  padding-top: 2.5rem;    
+  padding-bottom: 2.5rem; 
 }
 
 .horizontal-pic {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    margin: 0 auto;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  max-width: none;
+  height: auto;
+  display: block;
 }
 
-/* Footer */
-
-#footer {
-  position: absolute;
-  bottom: 0;
+/* --- Footer --- */
+footer {
+  flex-shrink: 0;
   width: 100%;
-  height: 2.5rem;    
   background-color: #E8E7DA;
-  padding-top: 50px;
+  padding: 2.5rem 0 1.5rem 0;
   text-align: center;
 }
-  
+
 .links {
-  font-family: 'Montserrat';
   font-weight: 300;
-  background-color: #E8E7DA;
-  bottom: 3%;
   font-size: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .copyright {
-  background-color: #E8E7DA;
-  color: black;
-  padding: 40px 0 10px;
+  color: #000000;
+  padding-top: 0.5rem;
   font-size: 0.8rem;
-  font-family: 'Montserrat';
   font-weight: 300;
 }
 
-a {
-  color: black;
-  text-decoration: none;
-  padding: 10px;
+/* --- Mobile Responsiveness Adjustments --- */
+@media (max-width: 991.98px) {
+  .pic-div {
+    padding-bottom: 2rem; 
+  }
+  .text-div {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
-a:hover {
-  color: #ADA87A;
+@media (max-width: 576px) {
+  /* Smaller paragraph & text sizing on mobile */
+  p {
+    font-size: 1.0rem;
+  }
+
+  .about {
+    font-size: 1.0rem;
+    text-align: left;
+  }
+
+  .contact-info {
+    font-size: 0.9rem;
+    padding: 0 0.5rem;
+  }
 }

@@ -3,58 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>emily eyman</title>
+    <title>Emily Eyman | Los Angeles Photographer & Filmmaker</title>
     <link rel="icon" type="image/x-icon" href="images/logos/logo2.svg">
 
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="./styles/bootstrap/css/bootstrap.min.css">
+    <!-- Preload Critical Above-the-Fold Hero Image -->
+    <link rel="preload" as="image" href="images/home/maddie-tay4.webp" type="image/webp">
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200&family=Cousine:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <!-- CSS -->
-    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200&family=Cousine:ital,wght@0,400;0,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
+    <!-- CSS -->
+    <link rel="stylesheet" href="./styles/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
     <div id="page-container">
-        <div id="page-content">
-            <!-- Navbar -->
-            <section id="home">
-                <div class="navbarDiv container-fluid">
-                    <nav class="navbar navbar-expand-lg w-100 justify-content-between">
-                        <a class="navbar-brand" href="index.html"><img class="logo" src="images/logos/logo.svg" alt="logo"></a>
-                            <button class="navbar-toggler navbar-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
-                        <div class="collapse navbar-collapse" id="navbarNav">
-                            <ul class="navbar-nav ms-auto">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="about.html">about</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="work.html">work</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="contact.html">contact</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="https://www.instagram.com/ejtookthis?igsi=MWs1d3k1dmIwNWoycg==">
-                                        <img src="images/logos/ig.svg" alt="Instagram" class="ig-icon">
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
+        <header>
+            <nav class="navbar navbar-expand-lg navbarDiv container-fluid w-100 justify-content-between">
+                <a class="navbar-brand" href="index.html">
+                    <img class="logo" src="images/logos/logo.svg" width="160" height="40" alt="Emily Eyman Logo">
+                </a>
+                <button class="navbar-toggler navbar-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="about.html">about</a></li>
+                        <li class="nav-item"><a class="nav-link" href="work.html">work</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">contact</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.instagram.com/ejtookthis" target="_blank" rel="noopener">
+                                <img src="images/logos/ig.svg" width="30" height="30" alt="Instagram Profile" class="ig-icon">
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-            </section>
-        </div>
+            </nav>
+        </header>
 
-        <!-- Home -->
-        <section>
-
-            <!-- About -->
-            <div id="home">
+        <main id="main-content">
+            <!-- Intro Section -->
+            <section class="bio-section">
                 <div class="text-div">
                     <p class="about">
                         Hi, I’m Emily Eyman, a Los Angeles-based photographer and filmmaker who loves capturing the little moments that feel like you.
@@ -64,39 +55,35 @@
                         My goal is to help you feel completely yourself while capturing the in-between moments, movement, and details that make your memories feel alive.
                     </p>    
                 </div> 
-            </div>
+            </section>
 
-            <!-- Photos -->
-            <div id="photos">
+            <!-- Featured Photos -->
+            <section id="photos">
                 <div class="container-fluid photos-div">
                     <div class="row">
                         <div class="col-lg-4 pic-div d-flex justify-content-center align-items-center">
-                            <img class="photo-small" src="images/home/aya.webp" alt="home-photo" >
+                            <img class="photo-small" src="images/home/aya.webp" width="400" height="600" alt="Portrait of Aya">
                         </div>
                         <div class="col-lg-4 pic-div d-flex justify-content-center align-items-center">
-                            <img class="photo-big" src="images/home/maddie-tay4.webp" alt="home-photo" >
+                            <img class="photo-big" src="images/home/maddie-tay4.webp" width="500" height="750" alt="Maddie and Tay photoshoot feature">
                         </div>
                         <div class="col-lg-4 pic-div d-flex justify-content-center align-items-center">
-                            <img class="photo-small" src="images/home/maddie-tay2.webp" alt="home-photo" >
+                            <img class="photo-small" src="images/home/maddie-tay2.webp" width="400" height="600" alt="Maddie and Tay side portrait">
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </main>
 
         <!-- Footer -->
-        <div id="footer">
-            <footer>
-                <div class="links">
-                    <a class="footer-link" href="mailto:emilyeymancreative@yahoo.com">Contact me</a>
-                </div>
-                <p class="copyright">© 2026 by Emily Eyman. All rights reserved.</p>
-            </footer>
-        </div>
-
+        <footer>
+            <div class="links">
+                <a class="footer-link" href="mailto:emilyeymancreative@yahoo.com">Contact me</a>
+            </div>
+            <p class="copyright">© 2026 by Emily Eyman. All rights reserved.</p>
+        </footer>
     </div>
 
     <script src="./styles/bootstrap/js/bootstrap.bundle.min.js"></script>
-
 </body>
 </html>
